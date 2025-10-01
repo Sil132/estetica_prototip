@@ -1,0 +1,660 @@
+codigo da estetica: <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética Elegance - Realce sua Beleza Natural</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fef3f7 0%, #f9f3fc 100%);
+            color: #5a4a5e;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 252, 254, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(219, 180, 206, 0.15);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #6d5a73;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #e89ac7;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e89ac7, #c49ad8);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #e89ac7 0%, #d188ba 100%);
+            color: #fffcfe;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(232, 154, 199, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(232, 154, 199, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 5% 4rem;
+            background: linear-gradient(135deg, #fef3f7 0%, #f3e8f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(232, 154, 199, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: #5a4a5e;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .highlight {
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #7a6a7e;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 500px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23e89ac7;stop-opacity:0.3" /><stop offset="100%" style="stop-color:%23c49ad8;stop-opacity:0.3" /></linearGradient></defs><rect width="400" height="500" fill="url(%23grad1)" rx="20"/><circle cx="200" cy="150" r="60" fill="%23f9dce8" opacity="0.6"/><ellipse cx="200" cy="300" rx="120" ry="150" fill="%23f3e8f9" opacity="0.5"/><path d="M150 400 Q200 350 250 400" stroke="%23e89ac7" stroke-width="3" fill="none" opacity="0.7"/></svg>') center/cover;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(196, 154, 216, 0.3);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            color: #fffcfe;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(232, 154, 199, 0.4);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(232, 154, 199, 0.5);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 5%;
+            background: #fffcfe;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #5a4a5e;
+            margin-bottom: 3rem;
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #fef9fc 0%, #f9f3fc 100%);
+            padding: 2.5rem;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.4s;
+            border: 2px solid transparent;
+            box-shadow: 0 8px 25px rgba(196, 154, 216, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #e89ac7;
+            box-shadow: 0 15px 40px rgba(232, 154, 199, 0.25);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .service-card h3 {
+            color: #5a4a5e;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: #7a6a7e;
+            line-height: 1.7;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #fef3f7 0%, #f3e8f9 100%);
+        }
+
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #fffcfe;
+            padding: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(196, 154, 216, 0.15);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            font-size: 4rem;
+            color: #f3cedf;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            color: #6d5a73;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fffcfe;
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            color: #5a4a5e;
+            margin-bottom: 0.2rem;
+        }
+
+        .stars {
+            color: #f4c89e;
+        }
+
+     /* Gallery */
+/* Gallery */
+.gallery {
+    padding: 5rem 5%;
+    background: #fffcfe;
+}
+
+.gallery-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(196, 154, 216, 0.2);
+    transition: all 0.4s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(232, 154, 199, 0.3);
+}
+
+/* Imagem inteira */
+.gallery-item img {
+    width: 100%;
+    height: 350px; /* altura fixa opcional */
+    object-fit: contain; /* mantém a proporção da imagem inteira */
+    display: block;
+    border-radius: 25px 25px 0 0; /* apenas cantos superiores arredondados */
+}
+
+        
+
+        /* CTA Final */
+        .cta-final {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            text-align: center;
+            color: #fffcfe;
+        }
+
+        .cta-final h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-final p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .btn-cta-white {
+            display: inline-block;
+            background: #fffcfe;
+            color: #e89ac7;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(90, 74, 94, 0.2);
+        }
+
+        .btn-cta-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(90, 74, 94, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #fef9fc;
+            padding: 3rem 5%;
+            border-top: 2px solid #f3cedf;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            color: #5a4a5e;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #7a6a7e;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #e89ac7;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #e89ac7 0%, #c49ad8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fffcfe;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(232, 154, 199, 0.4);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #f3cedf;
+            color: #7a6a7e;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            nav {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image {
+                height: 350px;
+            }
+
+            .services-grid, .testimonials-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .cta-final h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* opcional */
+  object-fit: cover;
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Estética Elegance</div>
+            <nav>
+                <a href="#servicos">Serviços</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#galeria">Resultados</a>
+                <a href="#contato">Contato</a>
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação" class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Realce sua <span class="highlight">beleza natural</span> com cuidado e elegância</h1>
+                <p>Tratamentos estéticos personalizados para você se sentir ainda mais confiante e radiante. Agende sua avaliação gratuita hoje mesmo!</p>
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar minha avaliação gratuita" class="btn-cta" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agende sua Avaliação Gratuita
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="foto1.jpg"
+                     alt="Mulher sorrindo após tratamento estético">
+              </div>
+              
+            </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <h2 class="section-title">Nossos <span>Tratamentos</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-spa"></i></div>
+                <h3>Harmonização Facial</h3>
+                <p>Realce seus traços naturais com técnicas avançadas de preenchimento e contorno facial para um resultado harmonioso e natural.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Limpeza de Pele</h3>
+                <p>Tratamento profundo que remove impurezas, renova as células e deixa sua pele radiante, saudável e rejuvenescida.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-magic"></i></div>
+                <h3>Botox & Toxina</h3>
+                <p>Suavize linhas de expressão e previna o envelhecimento com aplicações precisas e seguras para um visual renovado.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-gem"></i></div>
+                <h3>Peeling Químico</h3>
+                <p>Renove sua pele com tratamentos que clareiam manchas, uniformizam o tom e estimulam a produção de colágeno.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-heart"></i></div>
+                <h3>Skinbooster</h3>
+                <p>Hidratação profunda que revitaliza a pele de dentro para fora, proporcionando luminosidade e textura aveludada.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-star"></i></div>
+                <h3>Microagulhamento</h3>
+                <p>Estimule a produção de colágeno e elastina para uma pele mais firme, renovada e com aspecto rejuvenescido.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="depoimentos">
+        <h2 class="section-title">O que nossas <span>clientes dizem</span></h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">Experiência incrível! A equipe é super atenciosa e o resultado da harmonização facial ficou exatamente como eu sonhava. Me sinto muito mais confiante!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MC</div>
+                    <div class="author-info">
+                        <h4>Maria Clara</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Fiz a limpeza de pele e fiquei impressionada com o cuidado e profissionalismo. Minha pele nunca esteve tão radiante! Super recomendo a clínica.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JS</div>
+                    <div class="author-info">
+                        <h4>Juliana Santos</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">A aplicação de botox foi impecável! Sem dor, resultado natural e duradouro. Finalmente encontrei um lugar de confiança para meus tratamentos estéticos.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PA</div>
+                    <div class="author-info">
+                        <h4>Patricia Almeida</h4>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    
+<!-- Gallery -->
+<section class="gallery" id="galeria">
+    <h2 class="section-title">Resultados <span>Transformadores</span></h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="foto2.jpg" alt="Antes e Depois">
+        </div>
+        <div class="gallery-item">
+            <img src="foto3.jpg" alt="Antes e Depois">
+        </div>
+        <div class="gallery-item">
+            <img src="foto4.jpg" alt="Antes e Depois">
+        </div>
+        <!-- Adicione mais itens conforme necessário -->
+    </div>
+</section>
+
+
+
+  
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <h2>Pronta para realçar sua beleza?</h2>
+        <p>Agende sua avaliação gratuita e descubra os melhores tratamentos para você!</p>
+        <a href="https://wa.me/5511999999999?text=Olá! Quero agendar minha avaliação gratuita" class="btn-cta-white" target="_blank">
+            <i class="fab fa-whatsapp"></i> Agende Agora Mesmo
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Estética Elegance</h3>
+                <p>Cuidando da sua beleza com excelência e dedicação desde 2015.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/5511999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@elegance.com.br</p>
+                <p><i class="fas fa-map-marker-alt"></i> Rua da Beleza, 123 - São Paulo/SP</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horário de Atendimento</h3>
+                <p>Segunda a Sexta: 9h às 19h</p>
+                <p>Sábado: 9h às 15h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Estética Elegance. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
